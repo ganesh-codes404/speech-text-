@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Voice to Text</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Live Voice to Text</h1>
+  <button id="record">Start Listening</button>
+  <textarea id="output" placeholder="Your speech will appear here..." rows="10" readonly></textarea>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 60px;
+      color: #333;
+    }
+
+    #record {
+      margin-top: 20px;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      border-radius: 8px;
+      background: #4caf50;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    #record:hover {
+    background: #4caf50;
+      transform: scale(1.05);
+    }
+
+    #output {
+      margin-top: 30px;
+      width: 90%;
+      max-width: 800px;
+      height: 100%;
+      flex-grow: 1;
+      padding: 20px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      border-top: 2px solid #aaa;
+      border-radius: 16px 16px 0 0;
+      background: #ffffffde;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+      resize: none;
+      overflow-y: auto;
+    }
+  </style>
+
+  <script src="script.js"></script>
+</body>
+</html>
